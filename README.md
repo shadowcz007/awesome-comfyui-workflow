@@ -7,16 +7,21 @@
 </p>
 
 
-#### [AI Dialogue Game <Journey to the West>](./workflow/ai-dialogue-game-journey-to-the-west/README.md)
-
-<p align="left">
-  <img src="./workflow/ai-dialogue-game-journey-to-the-west/ai-dialogue-game-journey-to-the-west-v1.jpg" width="200">
-</p>
-
-
-
 #### [Real-time design](./workflow/real-time-design/README.md)
 
 <p align="left">
   <img src="./workflow/real-time-design/real-time-design-v1.png" width="200">
+</p>
+
+#### [Extended image (No prompts needed)](./workflow/extended-image/README.md)
+
+<p align="left">
+  <img src="./workflow/extended-image/extended-image.jpg" width="200">
+</p>
+
+
+#### [AI Dialogue Game <Journey to the West>](./workflow/ai-dialogue-game-journey-to-the-west/README.md)
+
+<p align="left">
+  <img src="./workflow/ai-dialogue-game-journey-to-the-west/ai-dialogue-game-journey-to-the-west-v1.jpg" width="200">
 </p>
