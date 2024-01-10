@@ -32,3 +32,10 @@
 <p align="left">
   <img src="./workflow/face-off/face-off.jpg" width="200">
 </p>
+
+
+#### [Easy Logo Animation](./workflow/easy-logo-animation/README.md)
+
+<p align="left">
+  <img src="./workflow/easy-logo-animation/easy-logo-animation-v1.gif" width="200">
+</p>
