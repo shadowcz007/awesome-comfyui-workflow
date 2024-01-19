@@ -20,7 +20,7 @@
 </p>
 
 
-#### [AI Dialogue Game <Journey to the West>](./workflow/ai-dialogue-game-journey-to-the-west/README.md)
+#### [AI Dialogue Game:Journey to the West](./workflow/ai-dialogue-game-journey-to-the-west/README.md)
 
 <p align="left">
   <img src="./workflow/ai-dialogue-game-journey-to-the-west/ai-dialogue-game-journey-to-the-west-v1.jpg" width="200">
