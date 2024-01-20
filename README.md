@@ -1,5 +1,16 @@
 # awesome-comfyui-workflow
 
+## NEW! 🚀🚗🏃‍🤖
+
+#### [Easy 2D to 3D](./workflow/easy-2d-to-3d/README.md)
+
+<p align="left">
+  <img src="./workflow/easy-2d-to-3d/easy-2d-to-3d-v1.webp" width="200">
+</p>
+
+
+## Awesome
+
 #### [CUTE YOU！Create your cartoon likeness](./workflow/cute-you/README.md)
 
 <p align="left">
