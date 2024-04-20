@@ -14,6 +14,14 @@
       "link": "/posts/mission"
     },
     {
+      "text": "任务墙",
+      "link": "/posts/task/index"
+    },
+    {
+      "text": "趋势洞察",
+      "link": "/posts/insight/index"
+    },
+    {
       "text": "教程",
       "children": [
         {
@@ -33,10 +41,6 @@
           "link": "/posts/tutorial/advanced/index"
         }
       ]
-    },
-    {
-      "text": "任务墙",
-      "link": "/posts/task/index"
     },
     {
       "text": "Github",
