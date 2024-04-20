@@ -35,17 +35,8 @@
       ]
     },
     {
-      "text": "Paper",
-      "children": [
-        {
-          "text": "HCI",
-          "link": "/posts/paper/HCI"
-        },
-        {
-          "text": "LLM",
-          "link": "/posts/paper/LLM"
-        }
-      ]
+      "text": "任务墙",
+      "link": "/posts/task/index"
     },
     {
       "text": "Github",
