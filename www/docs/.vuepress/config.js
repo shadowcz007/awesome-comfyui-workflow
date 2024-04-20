@@ -204,5 +204,6 @@ export default defineUserConfig({
     })
   ],
   bundler: viteBundler(),
-  dest: myConfig.dest
+  dest: myConfig.dest,
+  base:myConfig.base
 })
