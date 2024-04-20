@@ -17,16 +17,20 @@
       "text": "教程",
       "children": [
         {
-          "text": "快速上手",
+          "text": "安装",
           "link": "/posts/tutorial/start/index"
         },
         {
-          "text": "接口",
+          "text": "交互界面",
           "link": "/posts/tutorial/interface/index"
         },
         {
           "text": "核心节点",
           "link": "/posts/tutorial/core_nodes/index"
+        },
+        {
+          "text": "高级与进阶",
+          "link": "/posts/tutorial/advanced/index"
         }
       ]
     },
