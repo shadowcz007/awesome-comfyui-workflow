@@ -28,7 +28,7 @@ try {
 
 export default defineUserConfig({
   title: myConfig.title,
-  description: { description: myConfig.description, ...myConfig.social },
+  description: myConfig.description,
   head: [
     [
       'meta',
