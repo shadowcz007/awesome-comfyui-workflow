@@ -1,5 +1,5 @@
 {
-  "dest": "my_site",
+  "dest": "../docs",
   "title": "ComfyUI中文爱好者社区",
   "description": "HELLO Mix ComfyUI",
   "social": {
