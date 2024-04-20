@@ -1,0 +1,48 @@
+{
+  "dest": "my_site",
+  "title": "ComfyUI中文爱好者社区",
+  "description": "HELLO Mix ComfyUI",
+  "social":{
+    "discord":"https://discord.gg/cXs9vZSqeK"
+  },
+  "keywords": "ComfyUI, Chinese community, open source, design, innovation,中文社区, 开源项目, 设计, 创新",
+  "author": "shadow",
+  "hostname": "www.mixcomfy.com",
+  "navbar": [
+    {
+      "text": "Mission",
+      "link": "/posts/mission"
+    },
+    {
+      "text": "教程",
+      "children": [
+        {
+          "text": "快速上手",
+          "link": "/posts/Tutorial/StartHere"
+        },
+        {
+          "text": "接口",
+          "link": "/posts/Tutorial/Interface/"
+        }
+        
+      ]
+    },
+    {
+      "text": "Paper",
+      "children": [
+        {
+          "text": "HCI",
+          "link": "/posts/paper/HCI"
+        },
+        {
+          "text": "LLM",
+          "link": "/posts/paper/LLM"
+        }
+      ]
+    },
+    {
+      "text": "Github",
+      "link": "https://github.com/shadowcz007/awesome-comfyui-workflow"
+    }
+  ]
+}

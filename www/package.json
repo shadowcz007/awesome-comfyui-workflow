@@ -1,0 +1,30 @@
+{
+  "name": "opendesign",
+  "version": "0.0.1",
+  "description": "A VuePress project",
+  "license": "MIT",
+  "type": "module",
+  "author": "openDesign Commuity",
+  "scripts": {
+    "docs:build": "vuepress build docs",
+    "docs:clean-dev": "vuepress dev docs --clean-cache",
+    "docs:dev": "vuepress dev docs",
+    "docs:update-package": "npx vp-update"
+  },
+  "devDependencies": {
+    "@vuepress/bundler-vite": "^2.0.0-rc.7",
+    "@vuepress/plugin-blog": "^2.0.0-rc.11",
+    "@vuepress/plugin-catalog": "next",
+    "@vuepress/plugin-container": "next",
+    "@vuepress/plugin-search": "next",
+    "@vuepress/plugin-seo": "next",
+    "@vuepress/plugin-sitemap": "next",
+    "@vuepress/theme-default": "^2.0.0-rc.11",
+    "vue": "^3.4.0",
+    "vuepress": "^2.0.0-rc.9",
+    "vuepress-plugin-md-enhance": "^2.0.0-rc.33"
+  },
+  "dependencies": {
+    "@vuepress/client": "^2.0.0-rc.9"
+  }
+}

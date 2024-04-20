@@ -1,0 +1,7 @@
+node_modules
+/docs/.vuepress/dist
+/docs/.vuepress/.temp
+/docs/.vuepress/.cache
+/docs/posts
+/cache
+/my_site
