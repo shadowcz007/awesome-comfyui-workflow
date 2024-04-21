@@ -30,6 +30,7 @@ Stable Diffusion，中文一般称为稳定扩散，是 2022 年发布的深度�
 双击*run_nvidia_gpu.bat* 启动 ComfyUI。
 
 启动后，你将看到 ComfyUI 的提示：
+
 ![](./media/http.png)
 
 请在浏览器里访问 [http://127.0.0.1:8188](http://127.0.0.1:8188) 访问
