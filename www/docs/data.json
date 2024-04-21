@@ -24,6 +24,9 @@
         {
           "text": "核心节点",
           "link": "/posts/tutorial/core_nodes/index"
+        },{
+          "text":"自定义节点",
+          "link":"/posts/tutorial/custom_nodes/index"
         },
         {
           "text": "高级与进阶",
