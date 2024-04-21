@@ -66,3 +66,8 @@ Stable Diffusion，中文一般称为稳定扩散，是 2022 年发布的深度�
 欢迎申请加入[ComfyUI 中文社区](https://docs.qq.com/form/page/DU2pRVE5OUmZ6amNj)
 
 访问由 Mixlab Nodes 维护的[discord 交流频道](https://discord.gg/cXs9vZSqeK)
+
+
+### 参考资料：
+[本地安装保姆级安装教程](https://ywukcp2ygto.feishu.cn/wiki/CULYw35eEiZVxQkdkQec91HmnGh?from=from_copylink)
+[云端安装教程](https://ywukcp2ygto.feishu.cn/wiki/YLlxw3E8fiKs6ek9vbKc2LRQnqo?from=from_copylink)
