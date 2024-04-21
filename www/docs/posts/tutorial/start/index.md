@@ -1,59 +1,67 @@
 ---
-
 ---
+
 # 教程
 
-> 这是基于[ComfyUI官方仓库](https://github.com/comfyanonymous/ComfyUI) 由ComfyUI中文社区维护的中文文档，ComfyUI是一个强大且模块化的稳定扩散GUI和后端。
+> ComfyUI 是一个强大且模块化的稳定扩散 GUI 和后端。我们基于[ComfyUI 官方仓库](https://github.com/comfyanonymous/ComfyUI) ，专门针对中文用户，做了优化和文档的细节补充。
 
-本页面的目标是帮助您快速上手ComfyUI，运行您的第一个生成，并为探索下一步提供一些建议。
+本教程的目标是帮助您快速上手 ComfyUI，运行您的第一个工作流，并为探索下一步提供一些参考指南。
 
 ## 安装
 
-我们不会详细介绍ComfyUI的安装，因为该项目正在积极开发中，这往往会改变安装说明。相反，请参阅GitHub上的[自述文件](https://github.com/comfyanonymous/ComfyUI#installing)，并找到与您的安装相关的部分（Linux，macOS或Windows）。
+安装方式，推荐使用官方的 [Window-Nvidia 显卡-免安装包](https://github.com/comfyanonymous/ComfyUI/releases/download/latest/ComfyUI_windows_portable_nvidia_cu121_or_cpu.7z) ,也可以从 [百度网盘](链接：https://pan.baidu.com/s/14hmH-NA_d5lObYNQAehKTQ?pwd=MAI0) 下载
+
+如果你是 Mac 或者 Linux 系统，请参考 GitHub 上的[安装说明](https://github.com/comfyanonymous/ComfyUI#installing)。
+
+### 什么是 stable diffusion？
+
+Stable Diffusion，中文一般称为稳定扩散，是 2022 年发布的深度学习生成模型，它可以根据文本的描述产生详细的图像。Stable Diffusion 通过一个复杂的概率扩散过程，逐步将原始图像转换为具有特定特征的图像，实现图像生成。
+
+![stable diffusion](./media/8047d707bb3ab08f774bc4c2f4b44484.png)
 
 ### 下载模型
 
-如果您完全不了解任何与稳定扩散相关的内容，您要做的第一件事就是获取一个模型_检查点_，您将用它来生成图像。
+如果您完全不了解任何与稳定扩散相关的内容，您要做的第一件事就是获取一个模型*checkpoints*，您将用它来生成图像。
 
-!!! 提示“经验丰富的用户”
+您可以在[CivitAI](https://civitai.com/) 或 [HuggingFace](https://huggingface.co/models?other=stable-diffusion) 等网站上找到多种模型。首先，获取您喜欢的模型*checkpoints*，并将其放置在`ComfyUI/models/checkpoints`中。
 
-如果您已经有文件（模型检查点，嵌入等），无需重新下载。您可以将它们保留在同一位置，只需告诉ComfyUI在哪里找到它们。为此，请找到名为`extra_model_paths.yaml.example`的文件，将其重命名为`extra_model_paths.yaml`，然后编辑相关行并重新启动Comfy。完成后，跳到下一节。
+## 启动 ComfyUI
 
-您可以在[CivitAI](https://civitai.com/) 或 [HuggingFace](https://huggingface.co/models?other=stable-diffusion) 等网站上找到多种模型。首先，获取您喜欢的模型_检查点_，并将其放置在`models/checkpoints`中（如果尚不存在，则创建目录），然后重新启动ComfyUI。
+双击*run_nvidia_gpu.bat* 启动 ComfyUI。
 
-## Comfy的第一步
+启动后，你将看到 ComfyUI 的提示：
+![](./media/http.png)
 
-此时，您应该已经在浏览器标签中启动并运行了ComfyUI。加载的默认流程是熟悉起步的好地方。要导航画布，您可以拖动画布，或者按住++space++并移动鼠标。您可以通过滚动来缩放。
+请在浏览器里访问 [http://127.0.0.1:8188](http://127.0.0.1:8188) 访问
 
+### Comfy 的第一步
 
-如果您弄乱了什么，只需在菜单中点击`Load Default`将其重置为初始状态。
+此时，您应该已经在浏览器标签中启动并运行了 ComfyUI。第一次使用，ComfyUI 加载的是一个默认的工作流。这是一个最基础的 text-to-image 的工作流。
+
+您可以拖动画布，或者按住空格键并移动鼠标。可以通过鼠标滚动来缩放。
+
+如果您弄乱了什么，只需在右边的菜单中点击`Load Default`将其重置为初始状态。
 
 ![ComfyUI默认工作流](./media/default_workflow.svg)
-> ComfyUI的默认启动工作流程（在新标签中打开图像以便更好地查看）
 
-
-在我们运行默认工作流之前，让我们进行一个小修改，以预览生成的图像而不保存它们：
+在我们运行工作流之前，让我们进行一个小修改，以预览生成的图像而不保存它们：
 
 1. 右键单击`Save Image`节点，然后选择`Remove`。
 1. 双击画布的空白部分，输入`preview`，然后单击`PreviewImage`选项。
 1. 找到`VAE Decode`节点的`IMAGE`输出，并将其连接到您刚添加的`Preview Image`节点的`images`输入。
 
-此修改将预览您的结果，而不会立即将它们保存到磁盘。别担心，如果您真的喜欢某个特定的结果，您仍然可以右键单击图像并选择`Save Image`
+此修改将预览您的结果，而不会将结果保存到*output*文件夹里。
 
-通过在菜单中点击`Queue Prompt`或在键盘上按++command+enter++ 或 ++control+enter++ 来创建您的第一张图片，就是这样！
+通过在菜单中点击`Queue Prompt`或在键盘上按*command+enter* 或 *control+enter*来创建您的第一张图片，就是这样！
 
-## 加载其他流程
+## 尝试其他工作流
 
-为了便于共享，许多稳定扩散界面（包括ComfyUI）都将生成流程的详细信息存储在生成的PNG中。您找到的与ComfyUI相关的许多工作流程指南也应该包括了此元数据。要加载生成图像的关联流程，只需通过菜单中的`Load`按钮加载图像，或将其拖放到ComfyUI窗口中。这将自动解析详细信息并加载所有相关节点及其设置。
+为了便于分享，ComfyUI 默认将工作流的详细信息存储在生成的 PNG 中。要加载生成图像的工作流，只需通过菜单中的`Load`按钮加载图像（或者是 JSON 文件），或将其拖放到 ComfyUI 窗口中。ComfyUI 将自动解析工作流的详细信息并加载所有相关节点及其设置。
 
-
-如果您加载了图像但没有显示流程，这可能意味着元数据已从文件中剥离。如果您知道图像的原始来源，请尝试要求作者将其重新上传到不剥离元数据的网站。
-
-## 下一步
-本页面应该已经为您提供了如何开始使用Comfy的初步概述。多亏了基于节点的界面，您可以构建由数十个节点组成的工作流程，所有这些节点都在做不同的事情，从而实现一些非常整洁的图像生成管道。
-
-您现在可能也有很多问题，比如刚才发生了什么，每个节点都做了什么，以及_"我如何做X事情"_之类的问题。希望这些问题能在其余的文档中得到回答。
+在那里可以获得更多的工作流？可以访问[ComfyUI 的官方示例工作流](https://comfyanonymous.github.io/ComfyUI_examples/)
 
 ## 进一步的支持
 
-有没有手册回答不了的其他问题？申请加入[ComfyUI中文社区](https://docs.qq.com/form/page/DU2pRVE5OUmZ6amNj)
+欢迎申请加入[ComfyUI 中文社区](https://docs.qq.com/form/page/DU2pRVE5OUmZ6amNj)
+
+访问由 Mixlab Nodes 维护的[discord 交流频道](https://discord.gg/cXs9vZSqeK)
