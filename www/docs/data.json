@@ -1,6 +1,6 @@
 {
   "dest": "../docs",
-  "base":"/awesome-comfyui-workflow/",
+  "base": "/awesome-comfyui-workflow/",
   "title": "ComfyUI中文爱好者社区",
   "description": "HELLO Mix ComfyUI",
   "social": {
@@ -11,19 +11,7 @@
   "hostname": "www.mixcomfy.com",
   "navbar": [
     {
-      "text": "使命",
-      "link": "/posts/mission"
-    },
-    {
-      "text": "任务墙",
-      "link": "/posts/task/index"
-    },
-    {
-      "text": "趋势洞察",
-      "link": "/posts/insight/index"
-    },
-    {
-      "text": "教程",
+      "text": "基础教程",
       "children": [
         {
           "text": "安装",
@@ -42,6 +30,18 @@
           "link": "/posts/tutorial/advanced/index"
         }
       ]
+    },
+    {
+      "text": "MixlabNodes",
+      "link": "/posts/mixlab_nodes/index"
+    },
+    {
+      "text": "任务墙",
+      "link": "/posts/task/index"
+    },
+    {
+      "text": "使命",
+      "link": "/posts/mission"
     },
     {
       "text": "Github",
