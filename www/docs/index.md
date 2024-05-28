@@ -3,37 +3,38 @@ home: false
 layout: PortfolioLayout
 title: Home
 heroImage: '/logo.png'
+heroHeight: 88
 
 actions:
-  - text: Get Started
-    link: /getting-started.html
+  - text: 加入国际社区
+    link: https://discord.gg/cXs9vZSqeK
     type: primary
 
-  - text: Introduction
-    link: https://vuejs.press/guide/introduction.html
+  - text: Mixlab微信社群申请
+    link: http://mixlab-co.mikecrm.com/wgn0LPw
     type: secondary
 
-features:
-  - title: Transparency in Design
-    details: Enhance transparency in design, allowing community-wide understanding and participation.
-  - title: Collaborative Innovation
-    details: Encourage knowledge sharing for collective design innovation.
-  - title: Cross-Cultural Exchange
-    details: Facilitate global designer interaction, enhancing design diversity and inclusivity.
-  - title: Integration of Technology and Design
-    details: Utilize the latest technology to enhance design efficacy.
-  - title: Building an Open-Source Ecosystem
-    details: Promote sharing, collaboration, and self-improvement for continuous industry growth.
-  - title: Comprehensive Critical Thinking
-    details: Assess design from multiple perspectives to improve quality and practicality.
+# features:
+#   - title: Transparency in Design
+#     details: Enhance transparency in design, allowing community-wide understanding and participation.
+#   - title: Collaborative Innovation
+#     details: Encourage knowledge sharing for collective design innovation.
+#   - title: Cross-Cultural Exchange
+#     details: Facilitate global designer interaction, enhancing design diversity and inclusivity.
+#   - title: Integration of Technology and Design
+#     details: Utilize the latest technology to enhance design efficacy.
+#   - title: Building an Open-Source Ecosystem
+#     details: Promote sharing, collaboration, and self-improvement for continuous industry growth.
+#   - title: Comprehensive Critical Thinking
+#     details: Assess design from multiple perspectives to improve quality and practicality.
 
 share: true
 
 waterfall:
-  - title: Transparency in Design
-    image: images/00052-3429002811.jpeg
-    details: Enhance transparency in design, allowing community-wide understanding and participation.
-    posts: mission
+  - title: BadCat探索者：生成APP和透明png图像多功能插件
+    image: https://i.ytimg.com/vi/03uoOPu5X8Y/maxresdefault.jpg
+    details: comfyui mixlab nodes 插件 工作流生成APP 透明png图像 多种功能
+    posts: discovery/comfyui mixlab nodes 插件 工作流生成APP 透明png图像 多种功能
   - title: Collaborative Innovation
     image: images/20240514134229.png
     details: Encourage knowledge sharing for collective design innovation.
