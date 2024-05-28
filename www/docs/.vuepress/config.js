@@ -135,7 +135,7 @@ export default defineUserConfig({
         'twitter:site': myConfig['twitter@username'] || myConfig.author,
         'twitter:creator': myConfig['twitter@username'] || myConfig.author,
         share_config:
-          myConfig['share_config'].join(',') ||
+          myConfig['share_config']?.join(',') ||
           [
             "buffer",
             "email",
