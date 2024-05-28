@@ -7,10 +7,11 @@ import { seoPlugin } from '@vuepress/plugin-seo'
 import { containerPlugin } from '@vuepress/plugin-container'
 import { catalogPlugin } from '@vuepress/plugin-catalog'
 import { mdEnhancePlugin } from 'vuepress-plugin-md-enhance'
-import { searchPlugin } from '@vuepress/plugin-search'
+import { searchProPlugin } from 'vuepress-plugin-search-pro'
 
 import fs from 'fs'
 import path from 'path'
+import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics'
 
 let myConfig = {}
 try {
@@ -45,8 +46,35 @@ export default defineUserConfig({
       }
     ],
     ['meta', { name: 'author', content: myConfig.author }],
-    ['script', { src: '/javascript/translate.js' }],
-    ['script', { src: '/javascript/model-viewer.min.js', type: 'module' }],
+    [
+      'meta',
+      { name: 'google-adsense-account', content: myConfig.googleAdsenseAccount }
+    ],
+    [
+      'script',
+      {
+        src: `${myConfig.base}${
+          !myConfig.base.endsWith('/') ? '/' : ''
+        }javascript/translate.js`
+      }
+    ],
+    // ['script', { src: `${myConfig.base}${!myConfig.base.endsWith('/')?'/':''}javascript/model-viewer.min.js`, type: 'module' }],
+    [
+      'script',
+      {
+        src: `${myConfig.base}${
+          !myConfig.base.endsWith('/') ? '/' : ''
+        }javascript/waterfall.min.js`
+      }
+    ],
+    [
+      'script',
+      {
+        async: true,
+        src: myConfig.googleAds,
+        crossorigin: 'anonymous'
+      }
+    ],
     [
       'meta',
       {
@@ -67,7 +95,6 @@ export default defineUserConfig({
     logo: '/logo.png',
     navbar: myConfig.navbar
   }),
-
   markdown: {
     lineNumbers: true,
     extractHeaders: ['h2', 'h3', 'h4', 'h5']
@@ -78,11 +105,16 @@ export default defineUserConfig({
       hostname: myConfig.hostname,
       excludePaths: ['/404.html']
     }),
+    searchProPlugin({
+      indexContent: true,
+      hotReload: true,
+      autoSuggestions: true
+    }),
     seoPlugin({
       title: $page => $page.title,
       description: $page => $page.frontmatter.description,
       // author: (_, $site) => $site.themeConfig.author,
-      tags: $page => $page.frontmatter.tags,
+      // tags: $page => $page.frontmatter.tags,
       type: $page =>
         ['articles', 'posts', 'blog'].some(folder =>
           $page.regularPath.startsWith('/' + folder)
@@ -90,7 +122,47 @@ export default defineUserConfig({
           ? 'article'
           : 'website',
       url: (_, $site, path) => ($site.themeConfig.domain || '') + path,
-      hostname: myConfig.hostname
+      hostname: myConfig.hostname,
+      author: { name: myConfig.author },
+      ogp: (ogp, page) => ({
+        ...ogp,
+        keywords: page.frontmatter.keywords || ogp.keywords,
+        'og:updated_time': new Date().toISOString(),
+        'og:modified_time': new Date().toISOString(),
+        'twitter:title': page.title,
+        'twitter:description': page.frontmatter.description,
+        'twitter:card': 'summary_large_image',
+        'twitter:site': myConfig['twitter@username'] || myConfig.author,
+        'twitter:creator': myConfig['twitter@username'] || myConfig.author,
+        share_config:
+          myConfig['share_config'].join(',') ||
+          [
+            "buffer",
+            "email",
+            "facebook",
+            "flipboard",
+            "hackernews",
+            "instapaper",
+            "line",
+            "linkedin",
+            "odnoklassniki",
+            "pinterest",
+            "pocket",
+            "quora",
+            "reddit",
+            "tumblr",
+            "twitter",
+            "vk",
+            "weibo",
+            "wordpress",
+            "xing",
+            "yammer"
+          ].join(',')
+      })
+    }),
+    googleAnalyticsPlugin({
+      // 配置项
+      id: myConfig.GA4
     }),
     mdEnhancePlugin({
       // your options
@@ -100,6 +172,11 @@ export default defineUserConfig({
     // }),
     catalogPlugin({
       // Your options
+      locales: {
+        '/': {
+          title: myConfig.category_title
+        }
+      }
     }),
     blogPlugin({
       // Only files under posts are articles
@@ -205,5 +282,14 @@ export default defineUserConfig({
   ],
   bundler: viteBundler(),
   dest: myConfig.dest,
-  base:myConfig.base
+  base: myConfig.base,
+  extendsPage: page => {
+    // 在 `routeMeta` 中设置 `date` 信息
+    const { frontmatter } = page
+    page.routeMeta = {
+      title: page?.title,
+      order: -new Date(frontmatter?.date).getTime() || null // 如果没有 `date`，默认为 null
+      // 其他信息
+    }
+  }
 })

@@ -1,3 +1,6 @@
-
 /www/docs/.obsidian
 /www/.idea
+www/docs/.vuepress/*
+www/docs/.vuepress/components/ArticleList.vue
+www/docs/.vuepress/config.js
+/www/node_modules

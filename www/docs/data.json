@@ -6,6 +6,29 @@
   "social": {
     "discord": "https://discord.gg/cXs9vZSqeK"
   },
+  "twitter@username": "mixlabPro",
+  "share_config": [
+    "buffer",
+    "email",
+    "facebook",
+    "flipboard",
+    "hackernews",
+    "instapaper",
+    "line",
+    "linkedin",
+    "odnoklassniki",
+    "pinterest",
+    "pocket",
+    "quora",
+    "reddit",
+    "tumblr",
+    "twitter",
+    "vk",
+    "weibo",
+    "wordpress",
+    "xing",
+    "yammer"
+  ],
   "keywords": "ComfyUI, Chinese community, open source, design, innovation,中文社区, 开源项目, 设计, 创新",
   "author": "shadow",
   "hostname": "www.mixcomfy.com",
@@ -24,9 +47,10 @@
         {
           "text": "核心节点",
           "link": "/posts/tutorial/core_nodes/index"
-        },{
-          "text":"自定义节点",
-          "link":"/posts/tutorial/custom_nodes/index"
+        },
+        {
+          "text": "自定义节点",
+          "link": "/posts/tutorial/custom_nodes/index"
         },
         {
           "text": "高级与进阶",

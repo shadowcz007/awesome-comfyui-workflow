@@ -1,6 +1,6 @@
 # 常用的自定义节点
 
-controlnet 预处理器 comfyui_controlnet_aux 、 ComfyUI-Advanced-ControlNet、ComfyUI_IPAdapter_plus 、ComfyUI_InstantID 等
+controlnet 预处理器 comfyui_controlnet_aux 、 ComfyUI-Advanced-ControlNet、ComfyUI_IPAdapter_plus 等
 
 ## ComfyUI_IPAdapter_plus
 

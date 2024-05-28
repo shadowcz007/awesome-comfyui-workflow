@@ -10,43 +10,43 @@ defineProps({
 })
 </script>
 
-<template>
+<!-- <template>
   <div class="article-wrapper">
     <div v-if="!items.length">Nothing in here.</div>
 
     <article
-      v-for="{ info, path } in items"
-      :key="path"
-      class="article"
-      @click="$router.push(path)"
+        v-for="{ info, path } in items"
+        :key="path"
+        class="article"
+        @click="$router.push(path)"
     >
       <header class="title">
         {{
-          (isTimeline ? `${new Date(info.date).toLocaleDateString()}: ` : '') +
-          info.title
+          (isTimeline ? `${new Date(info?.date).toLocaleDateString()}: ` : '') +
+          info?.title
         }}
       </header>
 
       <hr />
 
       <div class="article-info">
-        <span v-if="info.author" class="author">Author: {{ info.author }}</span>
+        <span v-if="info?.author" class="author">Author: {{ info?.author }}</span>
 
-        <span v-if="info.date && !isTimeline" class="date"
-          >Date: {{ new Date(info.date).toLocaleDateString() }}</span
+        <span v-if="info?.date && !isTimeline" class="date"
+        >Date: {{ new Date(info?.date).toLocaleDateString() }}</span
         >
 
-        <span v-if="info.category" class="category"
-          >Category: {{ info.category.join(', ') }}</span
+        <span v-if="info?.category" class="category"
+        >Category: {{ info?.category.join(', ') }}</span
         >
 
-        <span v-if="info.tag" class="tag">Tag: {{ info.tag.join(', ') }}</span>
+        <span v-if="info?.tag" class="tag">Tag: {{ info?.tag.join(', ') }}</span>
       </div>
 
-      <div v-if="info.excerpt" class="excerpt" v-html="info.excerpt" />
+      <div v-if="info?.excerpt" class="excerpt" v-html="info?.excerpt" />
     </article>
   </div>
-</template>
+</template> -->
 
 <style lang="scss">
 @use '@vuepress/theme-default/styles/mixins';
