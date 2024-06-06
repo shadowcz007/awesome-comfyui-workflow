@@ -51,6 +51,18 @@ waterfall:
     details: 熊叔是我们Mixlab的核心创始人之一，他不仅在职业生涯中积累了丰富的经验，更是在和shadow一起创造了爆火的comfyUI 节点 Mix nodes，今天，我们就来深入了解熊叔的职业生涯，以及他所参与开发的MIXLAB NODE产品，探索AI如何改变我们的工作与生活。
     posts: discovery/AI如何改变产品经理的工作
 
+  - title: 推荐玩腻了A1111的朋友试一下comfyui，速度更快，内存占用更少，工作流方便分享，可以一键封装成应用，还可以把窗口来出来对屏幕上某个区域做实时转译（类似Kirta的功能，需要使用comfyui-mixlab-nodes的工作流）。
+    posts: https://m.weibo.cn/status/4991913170309251
+    image: images/weibo_simon.png
+
+  - title: 如果你一直都在纠结怎么写好提示词，那这个工作流你一定要了解一下
+    posts: discovery/prompt
+    image: images/prompt.png
+
+  - title: 实时绘画工作流
+    posts: https://openart.ai/workflows/mixlab_shadow/now-you-can-enjoy-real-time-drawing/uLOTaEe06dtL0UECkdHz
+    image: images/openart.png
+
 
 
 
