@@ -46,6 +46,12 @@ waterfall:
     details: Mixlab Node在AI时代如何通过社区驱动开发模式重塑内容创作产品和社区生态。
     posts: discovery/聊聊Mixlab Node：AI时代如何重塑内容创作产品与社区生态
 
+  - title: AI如何改变产品经理的工作
+    image: https://bts-image.xyzcdn.net/aHR0cHM6Ly9pbWFnZS54eXpjZG4ubmV0L0ZuRWxOVnBPTG5QT0Q5WklGSl93azkxU1JOWkEuanBn.jpg
+    details: 熊叔是我们Mixlab的核心创始人之一，他不仅在职业生涯中积累了丰富的经验，更是在和shadow一起创造了爆火的comfyUI 节点 Mix nodes，今天，我们就来深入了解熊叔的职业生涯，以及他所参与开发的MIXLAB NODE产品，探索AI如何改变我们的工作与生活。
+    posts: discovery/AI如何改变产品经理的工作
+
+
 
 
 footer: MIT Licensed | Copyright © 2024-present {{$site.title}}
