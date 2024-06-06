@@ -63,7 +63,18 @@ waterfall:
     posts: https://openart.ai/workflows/mixlab_shadow/now-you-can-enjoy-real-time-drawing/uLOTaEe06dtL0UECkdHz
     image: images/openart.png
 
+  - title: comfyui-mixlab-nodes
+    image: https://gyazo.com/952b1a7722b91862507df871e2da41aa/max_size/1000
+    posts: https://scrapbox.io/work4ai/comfyui-mixlab-nodes
 
+  - title: 🚀🚗🚚🏃 ComfyUI-Workflow-to-APP @mixlab-nodes
+    image: https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/8336b034-8dd8-414f-8667-c5afe09ffdb6/width=525/8336b034-8dd8-414f-8667-c5afe09ffdb6.jpeg
+    posts: https://civitai.com/articles/3619/comfyui-workflow-to-app-mixlab-nodes
+
+
+  - title: "Realtime Sketchup AI Generation using Comfy UI : Ai for Architecture"
+    image: https://i.ytimg.com/vi/eM-9ySQnFcw/hqdefault.jpg
+    posts: https://www.youtube.com/watch?v=eM-9ySQnFcw
 
 
 footer: MIT Licensed | Copyright © 2024-present {{$site.title}}
